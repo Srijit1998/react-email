@@ -82,8 +82,8 @@ const Header = () => {
         />
         <MyAvatar
           size="md"
-          name="Segun Adebayo"
-          imageUrl="https://bit.ly/sage-adebayo"
+          name="Ryan Florence"
+          imageUrl="https://bit.ly/ryan-florence"
         />
       </Box>
     </Box>
