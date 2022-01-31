@@ -75,6 +75,7 @@ const Header = () => {
           w={8}
           h={8}
           mr={5}
+          display={{ base: "none", md: "inline-flex" }}
           _hover={{ color: "rgba(0, 0, 0, 0.3)" }}
         />
         <SettingsIcon
@@ -83,6 +84,7 @@ const Header = () => {
           w={8}
           h={8}
           mr={5}
+          display={{ base: "none", md: "inline-flex" }}
           _hover={{ color: "rgba(0, 0, 0, 0.3)" }}
         />
         <MyAvatar
