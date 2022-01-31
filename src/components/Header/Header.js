@@ -5,7 +5,7 @@ import {
 } from "@chakra-ui/icons";
 import { Box, Text } from "@chakra-ui/react";
 import { useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import MyAvatar from "../Avatar/MyAvatar";
 import MyInput from "../UI/MyInput";
 
@@ -17,6 +17,11 @@ const Header = () => {
     e.preventDefault();
     history.push(`/mail/search/${inputRef.current.value}`);
     inputRef.current.value = "";
+  };
+
+  const onTitleClickHandler = () => {
+    localStorage.removeItem("tagIndex");
+    history.push("/");
   };
 
   return (
@@ -31,19 +36,19 @@ const Header = () => {
       zIndex="1"
     >
       <Box display="flex" p={5} flex="1" w="full" alignItems="center">
-        <Link to="/">
-          <Text
-            cursor="pointer"
-            fontSize="4xl"
-            fontWeight="semibold"
-            letterSpacing="wider"
-            color="#CED0D1"
-            ml={{ base: "none", md: "0.5" }}
-            mr={{ base: "5", md: "20" }}
-          >
-            Email
-          </Text>
-        </Link>
+        <Text
+          onClick={onTitleClickHandler}
+          cursor="pointer"
+          fontSize="4xl"
+          fontWeight="semibold"
+          letterSpacing="wider"
+          color="#CED0D1"
+          ml={{ base: "none", md: "0.5" }}
+          mr={{ base: "5", md: "20" }}
+        >
+          Email
+        </Text>
+
         <form onSubmit={onFormSubmitHandler}>
           <MyInput
             ref={inputRef}
