@@ -49,6 +49,17 @@ const SearchPage = () => {
             />
           </Center>
         )}
+        {!loader && mails.length !== 0 && (
+          <div
+            style={{ marginBottom: "15px" }}
+            position="absolute"
+            top="300px"
+            left="200px"
+          >
+            About {mails.length} results for "{params.searchTerm}" (0.65
+            seconds)
+          </div>
+        )}
         {!loader && mails.length !== 0 && <MailList mails={mails} />}
         {!loader && mails.length === 0 && (
           <MyFeedback text={params.searchTerm} />
