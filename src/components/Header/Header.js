@@ -42,7 +42,7 @@ const Header = () => {
           fontSize="4xl"
           fontWeight="semibold"
           letterSpacing="wider"
-          color="#CED0D1"
+          color="#666"
           ml={{ base: "none", md: "0.5" }}
           mr={{ base: "5", md: "20" }}
         >
